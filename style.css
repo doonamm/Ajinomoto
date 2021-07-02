@@ -1,0 +1,363 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #fff;
+    color: #1f1f1f;
+}
+/* STOP WATCH ------ BEGIN */
+#stop-watch{
+    background-color: #ffa600;
+    padding: 20px 0 40px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 100;
+}
+#stop-watch button{
+    background-color: #ffa600;
+    border: 1px solid white;
+    color: white;
+    width: 170px;
+    margin-right: 20px;
+    height: 60px;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: ease-in background-color 0.3s, ease-in color 0.3s;
+}
+#stop-watch button:hover{
+    background-color: #fff;
+    color: #ffa600;
+    cursor:pointer;
+}
+#stop-watch button:last-child{
+    margin: 0;
+}
+#stop-watch #time{
+    margin: 15px 0;
+    font-size: 28px;
+}
+#stop-watch h2{
+    line-height: 1.6;
+}
+#stop-watch #time #split{
+    position: relative;
+    top: -5px;
+}
+#stop-watch #seconds,
+#stop-watch #tens{
+    font-size: 40px;
+}/* STOP WATCH ------ END */
+
+/* CLOCK --- BEGIN */
+#clock{
+    font-family: arial;
+    letter-spacing: 2px;
+    font-size: 60px;
+    height: 100px;
+    line-height: 100px;
+    background-color: #111111;
+    color: #01bacf;
+    user-select: none;
+}/* CLOCK --- END */
+
+/* CALCULATOR --- BEGIN */
+#calculator{
+    width: 500px;
+    margin: 10px auto;
+    box-shadow: 0 1px 7px 0px #ddd;
+    padding: 18px 15px 0;
+    font-size: 30px;
+    font-weight: normal;
+    user-select: none;
+    font-family: arial;
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+#calculator .cal-input{
+    width: 456px;
+    height: 75px;
+    line-height: 75px;
+    font-size: 35px;
+    text-align: right;
+    border: 1px solid #ddd;
+    margin: 0 auto;
+    transition: box-shadow 0.2s;
+    border-radius: 3px;
+    padding: 0 15px;
+    overflow-y: hidden;
+    letter-spacing: 2px;
+}
+#calculator .cal-input:hover{
+    box-shadow: inset 0 0 5px #ccc;
+}
+#calculator .cal-button{
+    margin: 20px auto 0;
+}
+#calculator .cal-operators{
+    margin-bottom: 20px;
+}
+#calculator .cal-operators > div {
+    display: inline-block;
+    width: 100px;
+    height: 58px;
+    line-height: 57px;
+    margin-right: 11px;
+    background-color: #ddd;
+    border: 1px solid #aaa;
+    transition: box-shadow 0.2s ease-in-out;
+    border-radius: 3px;
+}
+#calculator .cal-operators > div:last-child{
+    margin-right: 0;
+}
+#calculator .leftPanel{
+    display: inline-block;
+}
+#calculator .leftPanel .number{
+    margin-bottom: 20px;
+}
+#calculator .leftPanel .number > div {
+    display: inline-block;
+    width: 100px;
+    height: 58px;
+    line-height: 58px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    margin-right: 11px;
+    transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    border-radius: 3px;
+}
+#calculator .cal-button .equal{
+    display: inline-block;
+    width: 100px;
+    height: 292px;
+    line-height: 292px;
+    background-color: #4d90fe;
+    vertical-align: top;
+    border-radius: 3px;
+    color: white;
+    border: 1px solid #888;
+    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+#calculator .cal-button .equal:hover{
+    background-color: #3b90ec;
+    box-shadow: 0 0 2px 1px #ccc;
+}
+#calculator .cal-operators > div:hover{
+    box-shadow: 0px 1px 2px #ccc;
+    cursor: pointer;
+}
+#calculator .number div:hover{
+    box-shadow: 0px 1px 2px #aaa;
+    cursor: pointer;
+    background-color: #f2f2f2;
+}
+#calculator .number div:active,
+#calculator .cal-operators > div:active,
+#calculator .equal:active{
+    font-weight: bold;
+}/* CALCULATOR --- END */
+
+/* DRUM KIT --- BEGIN*/
+#main-wrapper{
+    background-color: #ffefbf;
+    margin: 30px auto 0;
+    width: 100%;
+    height: 600px;
+    text-align: center;
+    position: relative;
+    padding-top: 30px;
+}
+.main-title{
+    font-family: 'Pacifico', cursive;
+    font-size: 3.2em;
+    color: #cb2026;
+    text-shadow: 1px 1px 1px #5a0b0d;
+}
+.drum-kit-wrapper{
+    position: relative;
+    width: 600px;
+    margin: -40px auto 0;
+    /* border: 1px solid black; */
+}
+.drum-kit{
+    width: 100%;
+    height: 520px;
+    position: relative;
+}
+.crash-cymbal{
+    position: absolute;
+    top: 114px;
+    left: 80px;
+    transform: rotate(-6.8deg) scale(1.4);
+    transition: all ease-in-out .042s;
+}
+.hihat-top-cymbal{
+    position: absolute;
+    top: 166px;
+    right: 71px;
+    transform: scale(1.35);
+    transition: all ease-in-out .042s;
+    z-index: 0;
+}
+.key{
+    display: inline-block;
+    transition: all ease-in-out .042s;
+    position: absolute;
+    background-color: #eaeaea;
+    font-size: 1.5em;
+    height: 40px;
+    width: 40px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 4px;
+    border: 3px solid #aaa;
+    color: #444;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.65);
+    z-index: 2;
+}
+.key.kick{
+    top: 355px;
+    right: 250px;
+}
+.key.kick2{
+    top: 355px;
+    right: 308px;
+}
+.key.snare{
+    top: 280px;
+    right: 145px;
+}
+.key.tom-high{
+    top: 240px;
+    right: 227px;
+}
+.key.tom-mid{
+    top: 220px;
+    left: 222px;
+}
+.key.tom-low{
+    top: 320px;
+    left: 133px;
+}
+.key.crash{
+    top: 80px;
+    left: 75px;
+}
+.key.ride{
+    left: 165px;
+    top: 87px;
+}
+.key.hihat-open{
+    top: 144px;
+    right: 165px;
+}
+.key.hihat-close{
+    top: 150px;
+    right: 60px;
+}
+.playing{
+    transform: scale(1.2);
+}
+.key-map-wrapper{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 600px;
+    width: 250px;
+    background: #111;
+    z-index: 3;
+    opacity: 0.9;
+}
+.key-map-wrapper > h2{
+    color: #fff;
+    font-family: 'Handlee', cursive;
+    margin-bottom: 45px;
+    margin-top: 15px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 20px;
+}
+.key-map-list{
+    color: #fff;
+    text-align: left;
+    margin-left: 40px;
+}
+.key-map-list > li{
+    margin-bottom: 25px;
+}
+.key-code{
+    color: #444;
+    background: #eaeaea;
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 3px solid #aaa;
+    border-radius: 4px;
+}
+.key-sound{
+    font-size: 1.2em;
+    margin-left: 10px;
+    font-family: 'Handlee', cursive;
+    vertical-align: middle;
+}/* DRUM KIT --- END */
+
+/* COLOR GAME --- BEGIN */
+#color-game{
+    background-color: #2c8e99;
+    color: #fff;
+    font-family: cursive;
+    padding-top: 20px;
+    text-align: center;
+    user-select: none;
+}
+#color-game .color-title{
+    font-size: 30px;
+    font-weight: normal;
+    font-style: italic;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+#color-game .color-quiz{
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+#color-game .color-bot{
+    background-color: #232323;
+    height: 460px;
+    padding-top: 40px;
+}
+#color-game .color-button{
+    width: 700px;
+    margin: 0px auto 0;
+    /* border: 1px solid red; */
+    text-align: center;
+}
+#color-game .color-button > button{
+    width: 186px;
+    height: 180px;
+    margin-right: 20px;
+    margin-bottom: 23px;
+    display: inline-block;
+    border: 2px solid #000;
+    border-radius: 20%;
+    opacity: 1;
+    transition-property: background-color, opacity, transform, box-shadow;
+    transition-duration: .35s;
+    transition-timing-function: ease-in-out;
+}
+#color-game .color-button > button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 6px 1px #fff;
+}
+#color-game .color-button > button:nth-child(3n){
+    margin-right: 0;
+}/* COLOR GAME --- END */
